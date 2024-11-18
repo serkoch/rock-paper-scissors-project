@@ -9,10 +9,11 @@ button {
   margin: 20px 20px;
   border-radius: 25px;
   border: 0;
+  cursor: pointer;
+  box-shadow: 0 2px lightgray;
 }
 
 button:active {
-  background-color: ;
-  box-shadow: 0 3px lightgray;
+  box-shadow: 0 3px darkgray;
   transform: translateY(4px);
 }

@@ -56,14 +56,14 @@ btns.forEach((btn) => {
     if (humanScore === 5) {
       humanScore = 0;
       computerScore = 0;
-      stats.style.fontSize = "2rem";
+      stats.style.fontSize = "1.5rem";
       stats.style.fontWeight = 900;
       stats.style.color = "green";
       stats.textContent = "Congratulations! You won this match!";
     } else if (computerScore === 5) {
       humanScore = 0;
       computerScore = 0;
-      stats.style.fontSize = "2rem";
+      stats.style.fontSize = "1.5rem";
       stats.style.fontWeight = 900;
       stats.style.color = "red";
       stats.textContent = "Sorry, but you lost. Better luck next time!";
