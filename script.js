@@ -22,32 +22,28 @@ function getComputerChoice() {
 }
 
 function playRound(human, computer) {
+  stats.style.fontWeight = 400;
+  stats.style.color = "black";
+  stats.style.fontSize = "1rem";
   if (human === "rock" && computer === "scissors") {
-    console.log("You win! Rock beats scissors!");
-    stats.textContent = "You win! Rock beats scissors!";
+    stats.textContent = "You get a point! Rock beats scissors!";
     return humanScore++;
   } else if (human === "paper" && computer === "rock") {
-    console.log("You win! Paper beats rock!");
-    stats.textContent = "You win! Paper beats rock!";
+    stats.textContent = "You get a point! Paper beats rock!";
     return humanScore++;
   } else if (human === "scissors" && computer === "paper") {
-    console.log("You win! Scissors beat paper!");
-    stats.textContent = "You win! Scissors beat paper!";
+    stats.textContent = "You get a point! Scissors beat paper!";
     return humanScore++;
   } else if (computer === "rock" && human === "scissors") {
-    console.log("Computer wins! Rock beats scissors!");
-    stats.textContent = "Computer wins! Rock beats scissors!";
+    stats.textContent = "Computer gets a point! Rock beats scissors!";
     return computerScore++;
   } else if (computer === "paper" && human === "rock") {
-    console.log("Computer wins! Paper beats rock!");
-    stats.textContent = "Computer wins! Paper beats rock!";
+    stats.textContent = "Computer gets a point! Paper beats rock!";
     return computerScore++;
   } else if (computer === "scissors" && human === "paper") {
-    console.log("Computer wins! Scissors beat paper!");
-    stats.textContent = "Computer wins! Scissors beat paper!";
+    stats.textContent = "Computer gets a point! Scissors beat paper!";
     return computerScore++;
   } else {
-    console.log("It's a draw! Try again!");
     stats.textContent = "It's a draw! Try again!";
   }
 }
@@ -58,15 +54,19 @@ btns.forEach((btn) => {
     playRound(humanChoice, getComputerChoice());
     score.textContent = `You: ${humanScore} vs Computer: ${computerScore}`;
     if (humanScore === 5) {
-      console.log("You won this match!");
       humanScore = 0;
       computerScore = 0;
-      stats.textContent = "You won this match!";
+      stats.style.fontSize = "2rem";
+      stats.style.fontWeight = 900;
+      stats.style.color = "green";
+      stats.textContent = "Congratulations! You won this match!";
     } else if (computerScore === 5) {
-      console.log("Sorry, but you lost to a computer.");
       humanScore = 0;
       computerScore = 0;
-      stats.textContent = "Sorry, but you lost to a computer.";
+      stats.style.fontSize = "2rem";
+      stats.style.fontWeight = 900;
+      stats.style.color = "red";
+      stats.textContent = "Sorry, but you lost. Better luck next time!";
     }
   });
 });

@@ -8,4 +8,11 @@ button {
   min-width: 80px;
   margin: 20px 20px;
   border-radius: 25px;
+  border: 0;
+}
+
+button:active {
+  background-color: ;
+  box-shadow: 0 3px lightgray;
+  transform: translateY(4px);
 }
