@@ -10,10 +10,10 @@ button {
   border-radius: 25px;
   border: 0;
   cursor: pointer;
-  box-shadow: 0 2px lightgray;
+  box-shadow: 0 6px lightgray;
 }
 
 button:active {
   box-shadow: 0 3px darkgray;
-  transform: translateY(4px);
+  transform: translateY(3px);
 }
